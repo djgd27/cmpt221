@@ -2,11 +2,11 @@
 from db.db import db
 
 class Professor(db.Model):
-    __tablename__ = 'professors'
-    professor_id = db.Column(db.Integer,primary_key=True)
+    __tablename__ = 'Professors'
+    ProfessorID = db.Column(db.Integer,primary_key=True, autoincrement=True)
 
-    # create relationship with courses table. assoc table name = professor_course
-    course = db.relationship('courses', secondary = 'professor_course', back_populates = 'professors')
+    # create relationship with courses table. assoc table name = ProfessorCourse
+    course = db.relationship('Courses', secondary = 'ProfessorCourse', back_populates = 'Professors')
     def __init__(self):
         # remove pass and then initialize attributes
         pass
