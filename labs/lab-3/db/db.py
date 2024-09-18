@@ -24,7 +24,7 @@ from db.schema.course import Course
 # uncomment the line below after creating the professor class
 # from db.schema.professor import Professor
 # uncomment the line below after reviewing the assoc table
-# from db.schema.assoc import professor_course
+# from db.schema.assoc import ProfessorCourse
 
 # verify the db connection is successful
 with app.app_context():
@@ -42,4 +42,3 @@ with app.app_context():
     
     # create all database tables
     db.create_all()
-

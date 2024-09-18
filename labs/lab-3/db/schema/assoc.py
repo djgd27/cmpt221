@@ -2,10 +2,10 @@
 from db.db import db
 
 # join table between professors and courses
-student_course = db.Table(
-  'professor_course',
+ProfessorCourse = db.Table(
+  'ProfessorCourse',
   # grab the professor primary key and make it a foreign key
-  db.Column('professor_id', db.Integer, db.ForeignKey('professors.professor_id')),
+  db.Column('ProfessorID', db.Integer, db.ForeignKey('Professors.ProfessorID')),
   # grab the course primary key and make it a foreign key
-  db.Column('course_id', db.Integer, db.ForeignKey('courses.course_id'))
+  db.Column('CourseID', db.Integer, db.ForeignKey('Courses.CourseID'))
 )
