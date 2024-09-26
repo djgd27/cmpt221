@@ -4,6 +4,8 @@ from flask import render_template
 from server import *
 
 # create a webpage based off of the html in templates/index.html
+
+app = Flask(__name__, template_folder=os.path.join(os.getcwd(), 'templates'))
 @app.route('/')
 def index():
     return render_template("index.html")

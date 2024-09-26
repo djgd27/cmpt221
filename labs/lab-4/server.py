@@ -52,9 +52,22 @@ with app.app_context():
     # LAB 4 --------------------------------------------------
 
     # # write a query to insert 3 records into the Courses table
-    # query_1 = """ """
-    # db.session.execute(text(query_1))
-    # db.session.commit()
+    query_1 = """
+        INSERT INTO "Courses"
+        VALUES ('12466', 'SOFTWARE DEVELOPMENT II', 'Fall', '2024'); 
+            """
+    query_2 = """
+        INSERT INTO "Courses"
+        VALUES ('10976', 'DATA COMMUNICATIONS', 'Fall', '2024'); 
+            """
+    query_3 = """
+        INSERT INTO "Courses"
+        VALUES ('11118', 'DATABASE MANAGEMENT', 'Fall', '2024'); 
+            """
+    db.session.execute(text(query_1))
+    db.session.execute(text(query_2))
+    db.session.execute(text(query_3))
+    db.session.commit()
 
     # # write a query to select all records from the Courses table
     # query_2 = """ """
