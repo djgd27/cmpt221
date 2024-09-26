@@ -87,11 +87,13 @@ with app.app_context():
     db.session.commit()
 
     # # write a query to delete 1 record in the Courses table
-    # query_4 = """ """
-    # db.session.execute(text(query_4))
-    # db.session.commit()
+    query_4 = """DELETE 
+        FROM "Courses" 
+        WHERE "CourseID" = 10976;"""
+    db.session.execute(text(query_4))
+    db.session.commit()
 
-    # print(f"\n\n----------- Courses Table")
-    # courses = db.session.execute(text(query_2))
-    # for course in courses:
-    #     print(course)
+    print(f"\n\n----------- Courses Table")
+    courses = db.session.execute(text(query_2))
+    for course in courses:
+        print(course)
