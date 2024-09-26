@@ -80,9 +80,11 @@ with app.app_context():
         print(course)
 
     # # write a query to update 1 record in the Courses table
-    # query_3 = """ """
-    # db.session.execute(text(query_3))
-    # db.session.commit()
+    query_3 = """UPDATE "Courses"
+        SET "Semester" = 'SPRING'
+        WHERE "CourseID" = 11118;"""
+    db.session.execute(text(query_3))
+    db.session.commit()
 
     # # write a query to delete 1 record in the Courses table
     # query_4 = """ """
