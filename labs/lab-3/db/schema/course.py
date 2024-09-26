@@ -12,7 +12,7 @@ class Course(db.Model):
 
     # create relationship with professors table. assoc table name = ProfessorCourse
     Professor = db.relationship('Professors', secondary = 'ProfessorCourse', back_populates = 'Courses')
-    def __init__(self, name):
+    def __init__(self, CourseName):
         self.CourseName = self.CourseName
         self.Semester = self.Semester
         self.Year = self.Year
