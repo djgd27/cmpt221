@@ -1,9 +1,9 @@
 """app.py: render and route to webpages"""
-from db.db import *
+from flask import render_template
+
+from server import *
 
 # create a webpage based off of the html in templates/index.html
-# not required: if you want to play around with some html, feel free
-# to edit templates/index.html
 
 app = Flask(__name__, template_folder=os.path.join(os.getcwd(), 'templates'))
 @app.route('/')
@@ -12,4 +12,5 @@ def index():
 
 if __name__ == "__main__":
     # debug refreshes your application with your new changes every time you save
-    app.run(debug=True) 
+    app.run(debug=True)
+
