@@ -7,7 +7,6 @@ from db.server import app
 from db.server import db
 
 from db.schema.user import User
-from db.models.usermodel import UserModel
 
 
 @app.route('/')
@@ -19,28 +18,10 @@ def index():
 def signup():
     if request.method == 'POST':
         try:
-            # Parse form data into UserModel
-            user_data = UserModel(
-                first_name=request.form.get('first_name'),
-                last_name=request.form.get('last_name'),
-                email=request.form.get('email'),
-                phone_number=request.form.get('phone_number'),
-                password=request.form.get('password')
-            )
 
-            # Create a new User instance using ORM
-            new_user = User(
-                FirstName=user_data.first_name,
-                LastName=user_data.last_name,
-                Email=user_data.email,
-                PhoneNumber=user_data.phone_number,
-                Password=user_data.password
-            )
+            new_user = insert(User).values(request.form)
 
-            # Add the new user to the session
             db.session.add(new_user)
-
-            # Commit the session to save the user to the database
             db.session.commit()
 
             # Redirect to a login page or another route
