@@ -14,18 +14,41 @@
     <div>
       <!-- Create a sign up form here -->
       <form method="post">
-        <label for="firstName">First Name:<em>(required)</em></label>
-        <input type="text" id="firstName" name="first_name" value="" required />
+        <label for="firstName"
+          >First Name:<em style="color: red">(*)</em>
+        </label>
+        <input
+          type="text"
+          id="firstName"
+          name="first_name"
+          value=""
+          required
+          placeholder="Enter your first name"
+        />
         <br />
-        <label for="lastName">Last Name:<em>(required)</em></label>
-        <input type="text" id="lastName" name="last_name" value="" required />
+        <label for="lastName">Last Name:<em style="color: red">(*)</em> </label>
+        <input
+          type="text"
+          id="lastName"
+          name="last_name"
+          value=""
+          required
+          placeholder="Enter your last name"
+        />
         <br />
-        <label for="email">Email:<em>(required)</em></label>
-        <input type="email" id="email" name="email" value="" required />
+        <label for="email">Email:<em style="color: red">(*)</em> </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value=""
+          required
+          placeholder="Enter your email address"
+        />
         <br />
         <label for="phoneNumber"
-          >Phone Number:<em>(required, 10 digit phone number)</em></label
-        >
+          >Phone Number:<em style="color: red">(*)</em>
+        </label>
         <input
           type="text"
           id="phoneNumber"
@@ -33,16 +56,18 @@
           value=""
           required
           pattern="[0-9]{10}"
+          placeholder="Enter your 10-digit phone number"
         />
         <br />
-        <label for="password">Password:<em>(required, 8 characters)</em></label>
+        <label for="password">Password:<em style="color: red">(*)</em> </label>
         <input
           type="password"
           id="password"
           name="password"
           value=""
           required
-          pattern="[0-9A-Za-z]{8,}"
+          pattern="[0-9A-Za-z!@#$%&*+=?]{8,}"
+          placeholder="Create a password (min: 8 characters)"
         />
         <br />
         <input type="submit" />
