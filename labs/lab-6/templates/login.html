@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Lab 6 Log In</title>
-        <link rel="stylesheet" href="/static/style.css">
-    </head>
-    <body>
-        <h1>Log In</h1>
-        <div>
-        <!-- Create a log in form here -->
-
-        </div>
-        
-        <br>
-        <a href="/">
-            <button type="button" id="home">Home</button>
-        </a>
-    </body>
+  <head>
+    <title>Lab 6 Log In</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <nav>
+    <a href="/">
+      <button type="button" id="home">Home</button>
+    </a>
+  </nav>
+  <body>
+    <h1>Log In</h1>
+    <div>
+      <!-- Create a log in form here -->
+      <form method="post">
+        <label for="email"> Email: </label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          value=""
+          required
+          placeholder="Enter your email"
+        />
+        <br />
+        <label for="password"> Password: </label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value=""
+          required
+          placeholder="Enter your password"
+        />
+        <br />
+        <input type="submit" />
+      </form>
+    </div>
+  </body>
 </html>
