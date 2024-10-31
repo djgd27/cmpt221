@@ -74,28 +74,37 @@ function areYouSure() {
 }
 
 /* 2. Write a function to change 3 styles on the webpage                                                        */
-let colorState = "black"; // Initial color state
+let colorState = "black"; // Initial state
 
 function changeStyle() {
   let docElement = document.getElementById("welcome");
 
   switch (colorState) {
     case "black":
+      // Change styles for black state
       docElement.style.color = "red";
       docElement.style.fontSize = "32px";
       docElement.style.fontWeight = "bold";
+      document.body.style.backgroundColor = "white";
+      document.body.style.fontFamily = "Arial, sans-serif";
       colorState = "red"; // Update state
       break;
     case "red":
+      // Change styles for red state
       docElement.style.color = "blue";
       docElement.style.fontSize = "64px";
       docElement.style.fontWeight = "normal";
+      document.body.style.backgroundColor = "lightgray";
+      document.body.style.fontFamily = "Courier New, monospace";
       colorState = "blue"; // Update state
       break;
     case "blue":
+      // Change styles for blue state
       docElement.style.color = "green";
       docElement.style.fontSize = "128px";
       docElement.style.fontWeight = "bold";
+      document.body.style.backgroundColor = "black";
+      document.body.style.fontFamily = "Georgia, serif";
       colorState = "black"; // Update state
       break;
     default:
@@ -103,3 +112,8 @@ function changeStyle() {
       break;
   }
 }
+
+// Add event listener to the button
+document
+  .getElementById("changeStyleBtn")
+  .addEventListener("click", changeStyle);
