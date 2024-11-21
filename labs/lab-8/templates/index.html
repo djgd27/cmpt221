@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Lab 8</title>
-        <link rel="stylesheet" href="/static/css/style.css">
-        <script src="/static/js/lab8.js"></script>
-    </head>
-    <body>
-        <h1 id="welcome"></h1>
-        <div>
-            <button type="button" id="button1" onclick="areYouSure()">Say hi!</button>
-            <button type="button" id="button2" ondblclick="changeStyle()">Double click me!</button>
-        </div>
-    </body>
+  <head>
+    <title>Lab 8</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script src="/static/js/lab8.js"></script>
+  </head>
+  <body>
+    <h1 id="welcome">What are you doing here?</h1>
+    <div>
+      <button type="button" id="button1" onclick="areYouSure()">Say hi!</button>
+      <!-- double click does not work for some reason -->
+      <button type="button" id="button2" onclick="changeStyle()">
+        Click me!
+      </button>
+    </div>
+  </body>
 </html>
