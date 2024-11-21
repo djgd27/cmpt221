@@ -1,7 +1,7 @@
 """app.py: render and route to webpages"""
 import logging
 
-from flask import request, render_template, redirect, url_for
+from flask import Flask, request, render_template, redirect, url_for
 from sqlalchemy import insert, select
 
 from db.server import app
@@ -84,7 +84,7 @@ def login():
         else:
             # if they don't match, stay on the same page
             return redirect(url_for('login'))
-        
+
     return render_template('login.html')
 
 
@@ -104,3 +104,4 @@ if __name__ == "__main__":
     # debug refreshes your application with your new changes every time you save
     app.run(debug=True)
 
+app = Flask(__name__, template_folder='templates')
